@@ -1,94 +1,92 @@
-# 🌐 Flask — Guia de Comandos
+# 🌐 Flask — Comandos por Funcionalidade
 
-Este README contém **apenas os comandos relacionados ao Flask**.
-A criação e gerenciamento da **venv** são necessários, mas estão documentados separadamente.
+Este README organiza os comandos do **Flask** de forma clara e padronizada.
+A **venv é obrigatória**, mas seus comandos estão documentados em outro README.
 
 ---
 
 ## ⚠️ Sobre a venv
 
-Antes de tudo:
-
-* É necessário criar e ativar uma **venv**
-* Isso garante isolamento de dependências
-
-> Consulte o README de venv do repositório para os comandos completos.
+* Criar e ativar uma **venv** antes de usar Flask
+* Garante isolamento de dependências
+* Consulte o README de venv para os comandos completos
 
 ---
 
-## 🚀 Instalação do Flask
+## 🚀 Instalação
 
-```bash
-pip install flask
-```
-
----
-
-## 💾 Salvar dependências (opcional, mas recomendado)
-
-```bash
-pip freeze > requirements.txt
-```
+| Comando             | Descrição                   |
+| ------------------- | --------------------------- |
+| `pip install flask` | Instala o Flask no ambiente |
 
 ---
 
-## 📄 Criar arquivo principal
+## 💾 Dependências
 
-### Windows
-
-```bash
-type nul > app.py
-```
-
-### Linux / macOS
-
-```bash
-touch app.py
-```
+| Comando                           | Descrição            |
+| --------------------------------- | -------------------- |
+| `pip freeze > requirements.txt`   | Salva dependências   |
+| `pip install -r requirements.txt` | Instala dependências |
 
 ---
 
-## ▶️ Rodar aplicação
+## 📄 Arquivo da Aplicação
+
+### 🪟 Windows
+
+| Comando             | Descrição              |
+| ------------------- | ---------------------- |
+| `type nul > app.py` | Cria arquivo principal |
+
+### 🐧 Linux / 🍎 macOS
+
+| Comando        | Descrição              |
+| -------------- | ---------------------- |
+| `touch app.py` | Cria arquivo principal |
+
+---
+
+## ▶️ Execução da Aplicação
 
 ### Método direto (Python)
 
-```bash
-python app.py
-```
+| Comando         | Descrição                       |
+| --------------- | ------------------------------- |
+| `python app.py` | Executa a aplicação diretamente |
 
 ---
 
-## ▶️ Rodar via Flask CLI (recomendado)
+### Flask CLI (Recomendado)
 
-### Windows (CMD)
+### 🪟 Windows (CMD)
 
-```bash
-set FLASK_APP=app.py
-set FLASK_ENV=development
-flask run
-```
+| Comando                     | Descrição          |
+| --------------------------- | ------------------ |
+| `set FLASK_APP=app.py`      | Define app         |
+| `set FLASK_ENV=development` | Define ambiente    |
+| `flask run`                 | Executa o servidor |
 
-### Windows (PowerShell)
+### 🪟 Windows (PowerShell)
 
-```bash
-$env:FLASK_APP="app.py"
-$env:FLASK_ENV="development"
-flask run
-```
+| Comando                        | Descrição          |
+| ------------------------------ | ------------------ |
+| `$env:FLASK_APP="app.py"`      | Define app         |
+| `$env:FLASK_ENV="development"` | Define ambiente    |
+| `flask run`                    | Executa o servidor |
 
-### Linux / macOS
+### 🐧 Linux / 🍎 macOS
 
-```bash
-export FLASK_APP=app.py
-export FLASK_ENV=development
-flask run
-```
+| Comando                        | Descrição          |
+| ------------------------------ | ------------------ |
+| `export FLASK_APP=app.py`      | Define app         |
+| `export FLASK_ENV=development` | Define ambiente    |
+| `flask run`                    | Executa o servidor |
 
 ---
 
 ## 📄 Exemplo mínimo de `app.py`
 
-```python
+```python id="flaskexemplo"
 from flask import Flask
 
 app = Flask(__name__)
@@ -103,24 +101,37 @@ if __name__ == "__main__":
 
 ---
 
-## 📁 Estrutura recomendada
+## 📁 Estrutura Recomendada
 
-```text
-meu_projeto_flask/
+```id="estruturaflask"
+meu_projeto/
 │
-├── venv/              # ambiente virtual (ver README de venv)
-├── app.py             # aplicação principal
+├── venv/              # ambiente virtual (não versionar)
+├── src/               # código do projeto
+│   └── app.py
 ├── requirements.txt   # dependências
-└── README.md
+└── README.md          # documentação
 ```
 
 ---
 
 ## 🚫 .gitignore
 
-```gitignore
+```gitignore id="gitignoreflask"
 venv/
 __pycache__/
 *.pyc
 .env
 ```
+
+---
+
+## ⚠️ Boas práticas
+
+* Sempre usar venv
+* Não versionar `venv/`
+* Usar `requirements.txt`
+* Separar código dentro de `src/`
+* Usar modo development apenas em ambiente local
+
+---
