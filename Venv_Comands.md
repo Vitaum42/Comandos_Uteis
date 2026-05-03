@@ -1,51 +1,96 @@
-# 📦 Python venv — Guia Completo
+# 📦 Python venv — Comandos por Funcionalidade
 
-Este guia reúne **todos os comandos em sequência**, sem separações, para uso direto no dia a dia com ambientes virtuais (`venv`).
+Este README organiza os comandos de **ambiente virtual (venv)** de forma clara e padronizada.
 
-```bash
-# Criar ambiente virtual
-python -m venv venv
+---
 
-# Ativar (Windows CMD)
-venv\Scripts\activate
+## 🚀 Criação do Ambiente
 
-# Ativar (Windows PowerShell)
-venv\Scripts\Activate.ps1
+| Comando               | Descrição                |
+| --------------------- | ------------------------ |
+| `python -m venv venv` | Cria um ambiente virtual |
 
-# Ativar (Linux/macOS)
-source venv/bin/activate
+---
 
-# Verificar se está ativo (apenas visual)
-(venv) caminho/do/projeto>
+## ▶️ Ativação do Ambiente
 
-# Instalar pacote
-pip install nome_do_pacote
+### 🪟 Windows
 
-# Listar pacotes
-pip list
+| Comando                     | Descrição           |
+| --------------------------- | ------------------- |
+| `venv\Scripts\activate`     | Ativa no CMD        |
+| `venv\Scripts\Activate.ps1` | Ativa no PowerShell |
 
-# Salvar dependências
-pip freeze > requirements.txt
+### 🐧 Linux / 🍎 macOS
 
-# Instalar dependências
-pip install -r requirements.txt
+| Comando                    | Descrição        |
+| -------------------------- | ---------------- |
+| `source venv/bin/activate` | Ativa o ambiente |
 
-# Atualizar pip
-python -m pip install --upgrade pip
+---
 
-# Desativar ambiente
-deactivate
+## ⛔ Desativação
 
-# Remover ambiente (Linux/macOS)
-rm -rf venv
+| Comando      | Descrição                   |
+| ------------ | --------------------------- |
+| `deactivate` | Desativa o ambiente virtual |
 
-# Remover ambiente (Windows)
-rmdir /s venv
-```
+---
 
-## 📁 Estrutura recomendada
+## 🔎 Verificação
 
-```
+| Situação     | Descrição                                    |
+| ------------ | -------------------------------------------- |
+| `(venv) ...` | Indica que o ambiente está ativo no terminal |
+
+---
+
+## 📦 Gerenciamento de Pacotes
+
+| Comando                | Descrição                               |
+| ---------------------- | --------------------------------------- |
+| `pip install <pacote>` | Instala um pacote                       |
+| `pip list`             | Lista pacotes instalados                |
+| `pip freeze`           | Lista pacotes no formato de dependência |
+
+---
+
+## 💾 Dependências
+
+| Comando                           | Descrição                       |
+| --------------------------------- | ------------------------------- |
+| `pip freeze > requirements.txt`   | Salva dependências              |
+| `pip install -r requirements.txt` | Instala dependências do arquivo |
+
+---
+
+## 🔄 Atualização
+
+| Comando                               | Descrição      |
+| ------------------------------------- | -------------- |
+| `python -m pip install --upgrade pip` | Atualiza o pip |
+
+---
+
+## ❌ Remoção do Ambiente
+
+### 🐧 Linux / 🍎 macOS
+
+| Comando       | Descrição     |
+| ------------- | ------------- |
+| `rm -rf venv` | Remove a venv |
+
+### 🪟 Windows
+
+| Comando         | Descrição     |
+| --------------- | ------------- |
+| `rmdir /s venv` | Remove a venv |
+
+---
+
+## 📁 Estrutura Recomendada
+
+```id="estruturavenv"
 meu_projeto/
 │
 ├── venv/              # ambiente virtual (não versionar)
@@ -55,11 +100,24 @@ meu_projeto/
 └── README.md          # documentação
 ```
 
+---
+
 ## 🚫 .gitignore
 
-```
+```gitignore id="g1e8nx"
 venv/
 __pycache__/
 *.pyc
 .env
 ```
+
+---
+
+## ⚠️ Boas práticas
+
+* Sempre ativar a venv antes de instalar pacotes
+* Não versionar a pasta `venv/`
+* Usar `requirements.txt` para padronizar dependências
+* Criar uma venv para cada projeto
+
+---
