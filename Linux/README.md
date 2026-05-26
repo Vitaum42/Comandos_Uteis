@@ -8,17 +8,17 @@ Este repositório reúne guias organizados por tema para quem está começando n
 
 | Arquivo | Conteúdo |
 | ------- | -------- |
-| [📦 Instalação](./Linux_01_Instalacao.md) | Como instalar o Linux do zero |
-| [🔍 Navegação](./Linux_02_Navegacao.md) | Navegar pelo sistema de arquivos |
-| [📁 Arquivos e Pastas](./Linux_03_Arquivos.md) | Criar, copiar, mover e remover |
-| [📄 Leitura e Edição](./Linux_04_Edicao.md) | Ler e editar arquivos no terminal |
-| [🔎 Busca e Filtros](./Linux_05_Busca.md) | Encontrar arquivos e conteúdo |
-| [📦 Pacotes](./Linux_06_Pacotes.md) | Instalar e gerenciar programas |
-| [👤 Usuários e Permissões](./Linux_07_Permissoes.md) | Usuários, grupos e permissões |
-| [⚙️ Processos e Sistema](./Linux_08_Processos.md) | Monitorar e controlar processos |
-| [🌐 Rede](./Linux_09_Rede.md) | Comandos de rede e conectividade |
-| [🗜️ Compactação](./Linux_10_Compactacao.md) | Compactar e descompactar arquivos |
-| [🔤 Atalhos do Terminal](./Linux_11_Atalhos.md) | Produtividade no terminal |
+| [📦 Instalação](./Comandos/Linux_01_Instalacao.md) | Como instalar o Linux do zero |
+| [🔍 Navegação](./Comandos/Linux_02_Navegacao.md) | Navegar pelo sistema de arquivos |
+| [📁 Arquivos e Pastas](./Comandos/Linux_03_Arquivos.md) | Criar, copiar, mover e remover |
+| [📄 Leitura e Edição](./Comandos/Linux_04_Edicao.md) | Ler e editar arquivos no terminal |
+| [🔎 Busca e Filtros](./Comandos/Linux_05_Busca.md) | Encontrar arquivos e conteúdo |
+| [📦 Pacotes](./Comandos/Linux_06_Pacotes.md) | Instalar e gerenciar programas |
+| [👤 Usuários e Permissões](./Comandos/Linux_07_Permissoes.md) | Usuários, grupos e permissões |
+| [⚙️ Processos e Sistema](./Comandos/Linux_08_Processos.md) | Monitorar e controlar processos |
+| [🌐 Rede](./Comandos/Linux_09_Rede.md) | Comandos de rede e conectividade |
+| [🗜️ Compactação](./Comandos/Linux_10_Compactacao.md) | Compactar e descompactar arquivos |
+| [🔤 Atalhos do Terminal](./Comandos/Linux_11_Atalhos.md) | Produtividade no terminal |
 
 ---
 
